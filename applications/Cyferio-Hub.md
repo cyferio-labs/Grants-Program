@@ -106,40 +106,47 @@ The Cyferio Hub MVP has been successfully integrated with Sui and Babylon, demon
 ### Overview
 
 - **Total Estimated Duration**: 6 months
-- **Full-Time Equivalent (FTE)**: 3 FTE
+- **Full-Time Equivalent (FTE)**: 4 FTE
 - **Total Costs**: 100,000 USD
 - **DOT %**: 50%
 
 ### Milestone 1 — Adapters Implementation
 
 - **Estimated Duration**: 2 months
-- **FTE**: 3
-- **Costs**: 20,000 USD
+- **FTE**: 4
+- **Costs**: 30,000 USD
 
 | Number  | Deliverable               | Specification                                                                                     |   |
 | ------- | ------------------------- | ------------------------------------------------------------------------------------------------- | - |
 | **0a.** | License                   | Apache 2.0                                                                                        |   |
-| **0b.** | Documentation             | Provide inline code documentation and tutorials for deploying adapters on Acala, Aster, Moonbeam. |   |
+| **0b.** | Documentation             | Provide inline code documentation and tutorials for Cyferio SDK and Hub. |   |
 | **0c.** | Testing and Testing Guide | Unit tests for all adapter implementations and a guide on running these tests.                    |   |
-| **1.**  | Adapter Implementation    | Implement adapters on Acala, Aster, and Moonbeam for use as DA and settlement layers.             |   |
+| **0d.** | Article/Tutorial          | We will publish an article and a tutorial that explains the work done as part of the grant.     |
+| **1.**  | Substrate module: Router | We will create a router module that will allow users store the Cache Rollup blob on Cyferio Hub          |   |
+| **1a.** | Cyferio SDK | We will create a FHE rollup to use Cyferio Hub as FHE blob as Cache Layer. |   |
+| **1b.** | Cacher | We will create a cacher server to accept the blob from Cyferio Hub and forward it to the corresponding Any Layer. |   |
+| **2.**  | Docker | We will provide a dockerfile to demonstrate the full functionality of our chain. |
 
 ### Milestone 2 — FHE Key Management Protocol Integration
 
 - **Estimated Duration**: 2 months
-- **FTE**: 3
-- **Costs**: 40,000 USD
+- **FTE**: 4
+- **Costs**: 30,000 USD
 
 | Number  | Deliverable                 | Specification                                                                                                                                   |   |
 | ------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | - |
 | **0a.** | License                     | Apache 2.0                                                                                                                                      |   |
-| **0b.** | Documentation               | Extend the documentation to include workflows for integrating MPC Key Management Protocol.                                                      |   |
-| **0c.** | Testing Guide               | Integration tests for secure key management and its impact on confidential rollup applications.                                                 |   |
-| **1.**  | MPC Key Management Protocol | Integrate MPC Key Management Protocol for FHE keys to ensure the robustness of confidential applications on rollups created by Cyferio SDK. |   |
+| **0b.** | Documentation               | Extend the documentation to include workflows for integrating Zama KMS (Key Management Service) for FHE keys.                                                      |   |
+| **0c.** | Testing Guide               | Integration tests for secure key management and its impact on confidential rollup applications.
+| **0d.** | Article/Tutorial          | We will publish an article and a tutorial that explains the work done as part of the grant.     |                                                 |   |
+| **1.**  | Zama KMS Integration | Integrate Zama KMS (Key Management Service) for FHE keys to ensure the robustness of confidential applications on rollups created by Cyferio SDK. |   |
+| **2.**  | Cyferio Client | User use Client to encrypt input and gen zkp to Cyferio SDK Node |   |
+| **3.**  | Zama ZKP Mdoule  | for Sending User's encrypted input process ZKP to Zama and Await Zama's verification |   |
 
 ### Milestone 3 — Live Testnet Deployment
 
 - **Estimated Duration**: 2 months
-- **FTE**: 3
+- **FTE**: 4
 - **Costs**: 40,000 USD
 
 | Number  | Deliverable   | Specification                                                                          |   |
@@ -147,7 +154,10 @@ The Cyferio Hub MVP has been successfully integrated with Sui and Babylon, demon
 | **0a.** | License       | Apache 2.0                                                                             |   |
 | **0b.** | Documentation | Update the documentation with details on deploying and managing the testnet.           |   |
 | **0c.** | Testing Guide | Integration testing for live testnet operations, ensuring performance and reliability. |   |
-| **1.**  | Live Testnet  | Deploy and test the live testnet for Cyferio Hub.                                      |   |
+| **0d.** | Article/Tutorial          | We will publish an article and a tutorial that explains the work done as part of the grant.     |          
+| **1.**  | Float DB  | A in-memory storage solution for Cyferio Hub and Cyferio SDK base on [Penumbra's Jellyfish Merkle Tree](https://github.com/penumbra-zone/jmt) and [dragonfly](https://github.com/dragonflydb/dragonfly).   
+| **2.**  | JAM  | Integrate Cyferio SDK and Hub to JAM .                                      |   |     
+| **3.**  | Live Testnet  | Deploy and test the live testnet for Cyferio Hub.                                      |   |
 
 
 ## Future Plans
